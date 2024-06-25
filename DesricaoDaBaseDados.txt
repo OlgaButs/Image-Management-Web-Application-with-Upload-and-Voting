@@ -1,0 +1,27 @@
+CREATE TABLE comments (
+                	id INTEGER PRIMARY KEY AUTOINCREMENT,
+                	idimg INTEGER NOT NULL,
+                	user TEXT NOT NULL,
+                	comment TEXT NOT NULL,
+                	datetime TEXT NOT NULL,
+            		FOREIGN KEY (idimg) REFERENCES images (id));
+
+CREATE TABLE users (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			username TEXT,
+			password TEXT,
+			sessionID TEXT);
+
+CREATE TABLE images (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			name TEXT NOT NULL,
+			path TEXT NOT NULL,
+			datetime TEXT NOT NULL,
+			author TEXT,
+			ups INTEGER,
+			dwn INTEGER);
+CREATE TABLE votes (
+			id INTEGER PRIMARY KEY AUTOINCREMENT,
+			idimg INTEGER,
+			idusr INTEGER,
+			vote TEXT);

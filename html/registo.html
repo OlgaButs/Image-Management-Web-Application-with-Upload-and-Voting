@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registo</title>
+  <link rel="shortcut icon" href="../images/ua.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/login.js" defer></script>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+    crossorigin="anonymous"
+  >
+
+  <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
+    crossorigin="anonymous">
+  </script>
+</head>
+<body>
+
+  <!--Cabeçalho-->
+  <header>
+
+    <div class="barra">
+      <div class="img-logo">
+        <img src="../images/icon.png" alt="trabalho logo">
+      </div>
+
+      <div class="dropdown" style="display: flex; align-items: center;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+            </svg>
+          Sobre
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" id="sobre">Sobre</a></li>
+          <li><a class="dropdown-item" id="ua">UA</a></li>
+        </ul>
+        <a id="login">Login</a> 
+      </div> 
+    </div>
+
+
+  </header>
+  <!--Fim cabeçalho-->
+
+  <!--Inicio conteudo-->
+  <main class="main">
+
+    <form style="padding: 25px 70px 25px 25px;"> 
+
+      <h2 style="font-size: 35px; margin: 5px;">Create Account</h2>
+      <div>
+
+        <input type="text" id="username" placeholder="Username" />
+        <div style="margin-top: 10%">
+
+          <input type="password" id="password" placeholder="Password" />
+          <div style="margin-top: 10%">
+            <button id="register_btn" type="submit" class="btn btn-danger" style="background-color: gray; border: 1px solid gray;">Create Account</button>
+          
+            <div class="form-check form-switch" style="margin-top: 3%">
+              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">Turn On to Change Password.</label>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </main>
+  <!--Fim conteudo-->
+
+</body>
+</html>

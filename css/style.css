@@ -1,0 +1,598 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    /*border: 1px solid red;*/
+}
+
+body {
+    display: block;
+    /*background-image: url(../images/background.png);*/
+    margin: 0;
+    height: 50vh;
+    overflow: overlay;
+}
+
+
+/*************************************************************Nav Bar********************************************/
+
+.barra {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    padding: 0px 100px;
+    border-bottom: 0.2px solid #1ca2ff;
+    box-shadow: #1ca2ff 0px 0px 5px 5px;
+}
+
+.img-logo img {
+    width: 110px;
+    height: 70px;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+}
+
+.btn-menu {
+    display: none;
+    align-items: center;
+}
+
+.nav-header nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav-header ul li {
+    height: 60px;
+    display: inline;
+    text-decoration: none;
+    padding: 0px 5px;
+}
+
+.nav-header ul li:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.nav-header ul li a {
+    padding: 20px 60px 20px 60px;
+    text-decoration: none;
+    color: #111;
+}
+
+.nav-header ul li a:hover {
+    color: #111;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px gray;
+}
+
+.btn-close-menu {
+    text-align: right;
+    padding-right: 15px;
+    display: none;
+}
+
+.sobrebtn {
+    display: flex;
+    align-items: center;
+}
+
+.sobrebtn input {
+    width: 100px;
+    height: 40px;
+}
+
+.barra a {
+    text-decoration: none;
+    color: #111;
+    padding-left: 30px;
+}
+
+/*****************************************Conteudo index*****************************/
+
+.main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #1ca2ff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 5px #1ca2ff;
+    background-color: white;
+}
+
+.main::after {
+    content: "";
+    background-image: url(../images/icon.png);
+    opacity: 0.2;
+    /* Define a opacidade da imagem de fundo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.botaoReg {
+    color: #111;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+
+.pages-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.text-container {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin-right: 25px;
+}
+
+.text-container h1,
+.text-container p {
+    text-align: center;
+}
+
+.photo-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.photo-container img {
+    object-fit: cover;
+    width: 500px;
+    height: 750px;
+    margin-right: 20px;
+    /*width: 100%;
+    height: auto;
+    object-fit: cover;*/
+}
+
+.page h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.page p {
+    font-size: 16px;
+}
+
+.ref-page {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mySlides {display:none}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.dot-link {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot-link.active {
+    background-color: rgb(52, 172, 255);;
+}
+
+.dot-local {
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.content-container {
+    width: 100%;
+    /*overflow-x: auto;*/
+    padding: 10px;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-left: 300px;
+    /*overflow: hidden;*/
+}
+
+.photo {
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    scroll-snap-align: center;
+}
+
+.photo.active {
+    border: 5px solid rgb(52, 172, 255);
+    border-style: solid;
+    scroll-behavior: auto;
+    scroll-snap-align: center;
+}
+
+/****************************************** Conteudo UpLoad **********************************/
+
+.UpLoad_Title {
+    margin: 2%;
+    text-align: center;
+}
+
+.UpLoad_Title h1 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+#upload_btn {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content_image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+#photo {
+    box-shadow: #1ca2ff 0px 0px 5px 5px;
+    background: white;
+}
+
+.file_upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file_upload h2 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+}
+
+.upload_input {
+    border: 0.5px ridge;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 15px;
+}
+
+.div_upload button a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.file-input::file-selector-button {
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+}
+
+/**************************************** Conteudo Gallery ********************************/
+
+.Gallery_Title {
+    margin: 2%;
+    text-align: center;
+}
+
+.Gallery_Title h1 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.btn_autor_input {
+    background: transparent;
+    color: black;
+    border: 0px;
+    font-size: large;
+}
+
+.autor_name {
+    border-radius: 10px;
+    border: 0.5px ridge;
+    height: 40px;
+    margin: 0px 20px;
+}
+
+.autor_name:hover {
+    border: 2px solid black;
+}
+
+.cont_gall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.teste {
+    margin: 20px;
+}
+
+.img_cont {
+    position: relative;
+}
+
+.image_gall {
+    border-radius: 50px;
+    box-shadow: #1ca2ff 0px 0px 5px 5px;
+}
+
+.mensagem {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    line-height: 250px;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50px;
+}
+
+.image_gall:hover+.mensagem {
+    display: block;
+    opacity: 1;
+}
+
+/******************************************** conteudo image *****************************/
+
+#comment-block {
+    display: flex; 
+    height: 70px; 
+    margin-bottom: 1%; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    color: white; 
+    border-radius: 50px;
+    align-items: center;
+}
+
+.remove_btn {
+    margin: 30px;
+}
+
+.remove_btn button {
+    margin-left: 3%;
+    background: gray;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5%;
+    width: 150px;
+    height: 38px;
+    color: white;
+}
+
+.return_btn {
+    margin: 30px;
+}
+
+.return_btn input {
+    background-color: gray; 
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
+.Image_Title {
+    margin: 1%;
+    text-align: center;
+}
+
+.Image_Title h1 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.Row_Image {
+    display: flex;
+    justify-content: space-around;
+}
+
+.comment-container {
+    height: 450px;
+    overflow-y: auto;
+}
+
+.cont_com {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 2%;
+}
+
+.tabelas-cont table {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.tabelas-cont table th {
+    background-color: white;
+    border: 1px ridge gray;
+    padding: 5px;
+    color: black;
+}
+
+.tabelas-cont table td {
+    background-color: white;
+    border: 3px ridge black;
+    padding: 5px;
+}
+
+.tabelas-cont table tr {
+    border: 1px ridge black;
+    padding: 5px;
+}
+
+/******************************************* Conteudo Proces *******************************/
+
+
+.Process_Title {
+    margin: 2%;
+    text-align: center;
+}
+
+.Process_Title h1 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.cont_Process {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cont_left_process {
+    width: 550px;
+    height: 450px;
+    box-shadow: #1ca2ff 0px 0px 5px 5px;
+    background: white;
+}
+
+.cont_right_process {
+    width: 550px;
+    height: 450px;
+    box-shadow: #1ca2ff 0px 0px 5px 5px;
+    background-color: white;
+}
+
+/********************************************Conteudo ua**************************************/
+
+.modal-ua {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+}
+
+.modal-ua__hide {
+    display: none;
+}
+
+.ua {
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.aside-ua {
+    margin: 60px auto;
+    border: 2px dashed black;
+    width: 25%;
+    background-color: white;
+    text-align: center;
+}
+
+.conteudo-ua-text {
+    background-color: white;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 50px 10px 10px 10px;
+}
+
+.aside-ua button {
+    border: 1px solid black;
+}
+
+.aside-ua button:hover {
+    background-color: #b5b9bc;
+}
+
+.aside-ua__content {
+    width: 100%;
+    height: 40%;
+    transition: all 1s ease-in-out;
+    z-index: 99;
+}
+
+.aside-ua__content__scaled {
+    position: relative;
+    top: 0;
+    left: 0;
+    scale: 200%;
+    transform: translateX(75%);
+    z-index: 99;
+}
+
+.conteudo-ua {
+    margin: 60px auto;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+
+/************************************Conteudo-Sobre**********************************************/
+
+.sobre {
+    margin: 10px;
+}
+
+.conteudo-sobre {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.info {
+    background-color: white;
+    width: 30%;
+    margin: 5%;
+    padding: 40px;
+    border-bottom: 0.2px solid #1ca2ff;
+    box-shadow: #1ca2ff 0px 0px 5px 5px;
+}
+
+
+
+
+
+/***********************************Slideshow*********************************/
